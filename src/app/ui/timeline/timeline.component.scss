@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  min-height: 5000px;
+  position: relative;
+  margin: 20px 0;
+
+  &:after {
+    content: '';
+    height: calc(100% - 63vh);
+    width: 20px;
+    background: #000;
+    display: inline-block;
+    position: absolute;
+    top: 58vh;
+    left: calc(50% - 10px);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}

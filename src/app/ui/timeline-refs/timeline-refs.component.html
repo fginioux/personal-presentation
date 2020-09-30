@@ -1,0 +1,22 @@
+<div class="timeline-refs" *ngIf="data">
+  <div class="timeline-refs__container">
+    <div class="timeline-refs__title">
+      <h2 class="font-medium">What happened that year?</h2>
+    </div>
+    <ul>
+      <li *ngFor="let item of data">
+        <section class="timeline-refs__item">
+          <div class="timeline-refs__item-image" [ngStyle]="{'background-image': 'url(' + item.img + ')'}">
+            <img [src]="item.img">
+          </div>
+          <div class="timeline-refs__item-desc">
+            <span class="font-regular font-size-regular">{{item.title}}</span>
+            <div>
+              <span class="timeline-refs__item-note font-thin font-size-s">{{item.desc}}</span>
+            </div>
+          </div>
+        </section>
+      </li>
+    </ul>
+  </div>
+</div>

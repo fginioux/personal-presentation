@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "kaiser-personal-presentation"
+    }
+  },
+  "defaultProject": "kaiser-personal-presentation",
+  "cli": {
+    "analytics": false
+  }
 }

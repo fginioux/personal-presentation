@@ -1,0 +1,133 @@
+:host {
+  display: block;
+}
+
+:host-context(.timeline-step__align-right) {
+  .timeline-refs {
+    &__container {
+      ul {
+        padding-left: 0;
+        padding-right: 25%;
+      }
+    }
+
+    &__title {
+      text-align: left;
+      padding-left: 40px;
+      padding-right: 0px;
+    }
+  }
+}
+
+.timeline-refs {
+  &__title {
+    text-align: right;
+    padding-right: 40px;
+    margin-top: -70px;
+  }
+
+  &__container {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      height: 10px;
+      width: 100%;
+      background: #000;
+      border-radius: 10px;
+      display: flex;
+      justify-items: center;
+      box-sizing: border-box;
+      padding-left: 25%;
+
+      li {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 5px;
+          height: 30px;
+          background: #000;
+          display: block;
+          position: absolute;
+          left: calc(50% - 5px);
+          top: -30px;
+        }
+
+        section {
+          display: block;
+        }
+
+        &:nth-child(odd) {
+          position: relative;
+          top: 100px;
+
+          &:before {
+            height: 100px;
+            top: -100px;
+          }
+        }
+
+        &:nth-child(even) {
+          top: 30px;
+        }
+      }
+    }
+  }
+
+  &__item {
+    text-align: center;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item-desc {
+    margin-top: 5px;
+  }
+
+  &__item-note {
+    line-height: 125%;
+    display: inline-block;
+    padding-top: 5px;
+  }
+
+  &__item-image {
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    border: 5px solid #FFF;
+    padding: 5px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: none;
+    display: inline-block;
+    position: relative;
+    left: -2px;
+
+    &:after {
+      content: '';
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+      border: 5px solid #000;
+      position: absolute;
+      left: -10px;
+      top: -10px;
+      display: block;
+      border-radius: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 100%;
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+:host {
+  position: relative;
+  max-width: 1000px;
+  min-width: 80%;
+  margin: 0 auto;
+  z-index: 100;
+
+  min-height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.animate__animated {
+    .timeline-content {
+        &__refs, &__content {
+          opacity: 0;
+          transition: opacity .75s ease-in;
+        }
+      }
+
+    &.animate__in {
+      .timeline-content {
+        &__refs, &__content {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &.timeline-step__align-right {
+    .timeline-content {
+      &__refs {
+        left: auto;
+        right: 50%;
+      }
+    
+      &__content {
+        position: absolute;
+        right: 0;
+        left: auto;
+      }
+    }
+  }
+
+  &:last-child {
+    .timeline-content {
+      &__content {
+        position: absolute;
+        left: calc(50% - 350px);
+        height: 300px;
+        width: 700px;
+        max-width: 900px;
+        background: #000;
+        top: 200px;
+        color: #FFF;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &:after, &:before {
+          content: '';
+          width: 0;
+          height: 0;
+          overflow: hidden;
+          border: 40px solid transparent;
+          border-top: 150px solid transparent;
+          border-bottom: 150px solid transparent;
+          display: block;
+          position: absolute;
+          top: 0;
+        }
+      
+        &:after {
+          border-left-color: #FFF;
+          left: 0;
+        }
+        &:before {
+          border-right-color: #FFF;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+:host(.timeline-step__last) {
+  
+  .timeline-content__date {
+    margin-top: -50vh;
+  }
+
+  .timeline-content__content {
+    top: auto;
+    bottom: 29vh;
+  }
+}
+
+:host(.timeline-step__first) {
+  .timeline-content {
+    display: block;
+    width: 100%;
+    height: 200px;
+  }
+
+  .timeline-content__content {
+    position: relative;
+    max-width: auto;
+    left: auto;
+  }
+}
+
+.timeline-content {
+  &__container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__refs {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    z-index: -10;
+  }
+
+  &__content {
+    position: absolute;
+    left: 0;
+    max-width: 40%;
+  }
+}

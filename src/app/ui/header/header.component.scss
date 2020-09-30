@@ -1,0 +1,71 @@
+:host {
+  display: block;
+  width: 100%;
+  min-height: 200px;
+  position: relative;
+  top: -8vh;
+}
+
+.header {
+  background: #FFF;
+  padding-top: 0px;
+  display: block;
+  width: 100%;
+  font-size: 25px;
+
+  .font-size-xxl {
+    font-size: 30px;
+  }
+
+  &__informations {
+    & > div > div {
+      padding: 3px;
+    }
+  }
+
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__role {
+    position: relative;
+    top: -6px;
+
+    span:first-child, span:last-child {
+      position: relative;
+      display: inline-block;
+      margin: 0 4px;
+      top: 3px;
+    }
+  }
+
+  &__title {
+    &.inverted {
+      padding: 10px;
+      margin: 5px 0 15px 0;
+      position: relative;
+
+      &:after, &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        border: 26px solid #000;
+        display: block;
+        position: absolute;
+        top: 0;
+      }
+
+      &:after {
+        border-left-color: #FFF;
+        left: 0;
+      }
+      &:before {
+        border-right-color: #FFF;
+        right: 0;
+      }
+    }
+  }
+}

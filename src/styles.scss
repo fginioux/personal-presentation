@@ -1,24 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
 
-.font-thin { font-weight: 100; }
-.font-light { font-weight: 300; }
-.font-regular { font-weight: 400; }
-.font-medium { font-weight: 500; }
-.font-bold { font-weight: 700; }
-.font-xbold { font-weight: 900; }
+.font-thin {
+  font-weight: 100;
+}
+.font-light {
+  font-weight: 300;
+}
+.font-regular {
+  font-weight: 400;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-xbold {
+  font-weight: 900;
+}
 
-.font-size-xs { font-size: .5rem; }
-.font-size-s { font-size: .7rem; }
-.font-size-m { font-size: .8rem; }
-.font-size-regular { font-size: .9rem; }
-.font-size-l { font-size: 1rem; }
-.font-size-xl { font-size: 1.25rem; }
-.font-size-xxl { font-size: 1.6rem; }
+.font-size-xs {
+  font-size: 0.7rem;
+}
+.font-size-s {
+  font-size: 0.9rem;
+}
+.font-size-m {
+  font-size: 1rem;
+}
+.font-size-regular {
+  font-size: 1.1rem;
+}
+.font-size-l {
+  font-size: 1.2rem;
+}
+.font-size-xl {
+  font-size: 1.45rem;
+}
+.font-size-xxl {
+  font-size: 1.8rem;
+}
 
-.color-light { color: rgba(0,0,0,.1); }
-.color-medium {  color: rgba(0,0,0,.25); }
-.color-strong { color: rgba(0,0,0,.5); }
-.color-black { color: rgba(0,0,0,.7); }
+.color-light {
+  color: rgba(0, 0, 0, 0.1);
+}
+.color-medium {
+  color: rgba(0, 0, 0, 0.25);
+}
+.color-strong {
+  color: rgba(0, 0, 0, 0.5);
+}
+.color-black {
+  color: rgba(0, 0, 0, 0.7);
+}
 
 .uppercase {
   text-transform: uppercase;
@@ -29,7 +63,7 @@
 }
 
 .inverted {
-  color: #FFF;
+  color: #fff;
   background: #000;
 }
 
@@ -43,7 +77,7 @@
   line-height: 120%;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     width: #{$padding / 2};
@@ -55,9 +89,9 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #000;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   overflow: hidden;
   padding: 0;
@@ -90,10 +124,10 @@ app-root {
       display: inline-block;
 
       &:after {
-        content: '';
+        content: "";
         width: 100%;
         height: 3px;
-        background: #FFF;
+        background: #fff;
         display: block;
         position: relative;
         top: 5px;
